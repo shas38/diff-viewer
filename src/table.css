@@ -1,0 +1,59 @@
+.tableFixHead {
+  text-align: center;
+  margin: 5rem auto;
+  max-width: 300px;
+  max-height: 1000px;
+  overflow: scroll;
+}
+.tableFixHead table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.tableFixHead th,
+.tableFixHead td {
+  padding: 8px 16px;
+}
+
+td:first-child,
+th:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background: black;
+}
+td:nth-child(2),
+th:nth-child(2) {
+  position: sticky;
+  left: 50px;
+  z-index: 1;
+  background: black;
+}
+.tableFixHead th {
+  position: sticky;
+  top: 0;
+  background: black;
+  z-index: 2;
+}
+th:first-child,
+th:nth-child(2) {
+  z-index: 3;
+}
+th.rotate {
+  /* Something you can count on */
+  height: 140px;
+  white-space: nowrap;
+}
+
+th.rotate > div {
+  transform: 
+      /* Magic Numbers */ translate(5px, -8px) /* 45 is really 360 - 45 */ rotate(270deg);
+  width: 30px;
+}
+/* th.rotate > div > span {
+  border-bottom: 1px solid #ccc;
+  padding: 5px 10px;
+} */
+/* https://stackoverflow.com/questions/53499803/make-table-header-and-first-two-columns-fixed
+https://css-tricks.com/rotated-table-column-headers/
+*/
